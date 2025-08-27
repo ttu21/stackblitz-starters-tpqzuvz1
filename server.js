@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
 
-// Jeux ou créateurs autorisés
-const allowedPlaces = ["1234567890"];  // Mets ici le PlaceId du jeu
-const allowedCreators = ["11223344"];  // Mets ici le CreatorId du créateur
+// ⚡ Liste des jeux ou créateurs autorisés
+const allowedPlaces = ["1234567890"];
+const allowedCreators = ["11223344"];
 
 app.get("/check", (req, res) => {
   const placeId = String(req.query.placeId || "");
@@ -16,3 +16,5 @@ app.get("/check", (req, res) => {
 });
 
 app.listen(3000, () => console.log("API running on port 3000"));
+
+
